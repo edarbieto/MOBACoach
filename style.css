@@ -28,17 +28,20 @@
     border-width: 0px;
     font-size: 15px;
     background-color: #E86D29;
-    padding: 10px 52px 10px 52px;
+    padding: 10px 52px;
     border-radius: 25px;
-    margin: 40px;
+    margin: 40px 0;
 }
 
-.boton:hover,
-.boton:focus,
-.boton:not(:disabled):not(.disabled):active:focus{
+.boton:hover, .boton:focus, .boton:not(:disabled):not(.disabled):active:focus{
     background-color: #B35426;
     border-width: 0px;
     box-shadow: none;
+}
+
+.titulo {
+    font-family: roboto-black;
+    font-size: 58px;
 }
 
 .h-100 {
@@ -76,26 +79,23 @@
 }
 
 .que-es-titulo {
-    font-family: roboto-black;
-    font-size: 58px;
     margin: 40px;
 }
 
 .que-es-descripcion {
     font-family: roboto-light-italic;
     font-size: 20px;
-    margin: 0 130px 0 130px;
+    margin: 0 130px;
 }
 
 .que-es-img {
+    width: 75%;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     float: right;
 }
 
 .que-hace-titulo {
-    font-family: roboto-black;
-    font-size: 58px;
     margin: 40px 0 0 0;
 }
 
@@ -129,9 +129,7 @@
 }
 
 .unirse-titulo {
-    font-family: roboto-black;
-    font-size: 58px;
-    margin: 40px 0 0 0;
+    margin: 40px 0;
 }
 
 .unirse-descripcion {
@@ -183,6 +181,237 @@
 .email-aviso {
     font-family: roboto-light;
     font-size: 12px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+    .boton {
+        font-size: 13px;
+        padding: 8px 32px;
+    }
+
+    .titulo {
+        font-size: 33px;
+    }
+
+    .que-es-boton {
+        margin: 20px;
+    }
+
+    .inicio-logo {
+        width: 100px;
+        height: auto;
+        margin: 40px 0 10px 0;
+    }
+
+    .inicio-titulo {
+        font-size: 25px;
+    }
+
+    .inicio-descripcion {
+        font-size: 16px;
+    }
+
+    .que-es-titulo {
+        margin: 15px;
+    }
+
+    .que-es-descripcion {
+        font-size: 15px;
+        margin: 0 30px;
+    }
+
+    .que-es-img {
+        border-radius: 10px;
+        float: none;
+        margin: 20px 0;
+    }
+
+    .que-hace-titulo {
+        margin: 20px 0;
+    }
+
+    .que-hace-subtitulo2 {
+        font-size: 20px;
+    }
+
+    .que-hace-icono {
+        width: 30px;
+        margin: 10px;
+    }
+
+    .que-mobas-img {
+        width: 100vw;
+        height: auto;
+    }
+    
+    .seccion-portrait {
+        height: auto;
+    }
+
+    .unirse-titulo {
+        margin: 20px 0;
+    }
+
+    .unirse-descripcion {
+        margin: 30px 10px;
+    }
+
+    .email-titulo {
+        margin: 0;
+    }
+
+    .email-input {
+        width: 80%;
+    }
+
+    .email-aviso {
+        margin: 0 10px; 
+    }
+
+    .email-boton {
+        margin: 20px 0;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-creditos {
+        font-size: 13px;
+        margin: 0 10px 10px 0;
+    }
+
+    .icono {
+        margin: 10px 60px;
+    }
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 812px) and (orientation: landscape) {
+    .seccion-landscape {
+        height: auto;
+    }
+    
+    .boton {
+        font-size: 13px;
+        padding: 8px 32px;
+    }
+
+    .titulo {
+        font-size: 33px;
+    }
+
+    .inicio-logo {
+        width: 100px;
+        height: auto;
+        margin: 40px 0 10px 0;
+    }
+
+    .inicio-titulo {
+        font-size: 25px;
+        margin: 0 0 30px 0;
+    }
+
+    .inicio-descripcion {
+        font-size: 16px;
+    }
+
+    .inicio-boton {
+        margin: 30px 0;
+    }
+
+    .que-es-titulo {
+        margin: 15px;
+    }
+
+    .que-es-descripcion {
+        font-size: 15px;
+        margin: 0 30px;
+    }
+
+    .que-es-img {
+        border-radius: 10px;
+        float: none;
+        margin: 20px 0;
+    }
+
+    .que-es-boton {
+        margin: 0px;
+    }
+
+    .que-hace-titulo {
+        margin: 20px 0;
+    }
+
+    .que-hace-subtitulo2 {
+        font-size: 20px;
+    }
+
+    .que-hace-icono {
+        width: 30px;
+        margin: 10px;
+    }
+
+    .que-mobas-img {
+        width: 100vw;
+        height: auto;
+    }
+
+    .unirse-titulo {
+        margin: 20px 0;
+    }
+
+    .unirse-descripcion {
+        margin: 30px 10px;
+    }
+
+    .email-titulo {
+        margin: 0;
+    }
+
+    .email-input {
+        width: 80%;
+    }
+
+    .email-aviso {
+        margin: 0 10px; 
+    }
+
+    .email-boton {
+        margin: 20px 0;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-creditos {
+        font-size: 13px;
+        margin: 0 10px 10px 0;
+    }
+
+    .icono {
+        margin: 10px 60px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1280px) and (orientation: portrait) {
+    .que-es-descripcion {
+        margin: 0 50px;
+    }
+    
+    .que-es-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .que-mobas-img {
+        width: 100vw;
+        height: auto;
+    }
+    
+    .seccion-portrait {
+        height: auto;
+    }
 }
 
 @font-face {
