@@ -1,0 +1,9 @@
+un usuario tiene:
+
+imagen
+nick
+cuentas
+esta jugando o no
+ultimas estadisticas
+comunidades
+torneos
