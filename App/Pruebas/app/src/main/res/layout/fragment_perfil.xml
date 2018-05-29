@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -81,9 +81,11 @@
         </LinearLayout>
         
         <LinearLayout
+            android:id="@+id/fragment_perfil_ly_jugandoAhora"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10sp">
+            android:padding="10sp"
+            android:orientation="vertical">
             
             <TextView
                 android:id="@+id/fragment_perfil_tv_jugandoAhora"
@@ -95,12 +97,14 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/fragment_perfil_ly_estadisticas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10sp">
+            android:padding="10sp"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/fragment_perfil_tv_estadistica"
+                android:id="@+id/fragment_perfil_tv_estadisticas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Estadisticas"
@@ -108,6 +112,48 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/fragment_perfil_ly_comunidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fragment_perfil_tv_comunidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comunidades"
+                android:theme="@style/h2"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_perfil_rv_comunidades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_perfil_ly_torneos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fragment_perfil_tv_torneos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Torneos"
+                android:theme="@style/h2"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_perfil_rv_torneos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
-</FrameLayout>
+</android.support.v4.widget.NestedScrollView>

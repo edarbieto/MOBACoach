@@ -3,7 +3,9 @@ package ga.mobacoachapp.mobacoachprueba;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
@@ -12,6 +14,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
     FrameLayout frameLayout;
     AHBottomNavigation bottomNavigation;
+    TextView titulo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,7 @@ public class PrincipalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_principal);
         frameLayout = findViewById(R.id.frameLayout);
         bottomNavigation = findViewById(R.id.bottom_navigation);
+        titulo = findViewById(R.id.principal_tv_titulo);
         AHBottomNavigationItem item1 = new AHBottomNavigationItem("Perfil", R.drawable.perfil);
         AHBottomNavigationItem item2 = new AHBottomNavigationItem("Buscar", R.drawable.buscar);
         AHBottomNavigationItem item3 = new AHBottomNavigationItem("Notificaciones", R.drawable.notificacion);
@@ -33,16 +37,37 @@ public class PrincipalActivity extends AppCompatActivity {
         bottomNavigation.setAccentColor(Color.WHITE);
         bottomNavigation.setInactiveColor(Color.WHITE);
         bottomNavigation.setCurrentItem(0);
-        bottomNavigation.setTranslucentNavigationEnabled(true);
-        bottomNavigation.setBehaviorTranslationEnabled(true);
+        bottomNavigation.setTitleState(AHBottomNavigation.TitleState.ALWAYS_HIDE);
+        bottomNavigation.setAccentColor(R.color.colorPrimaryDark);
         bottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
             @Override
             public boolean onTabSelected(int position, boolean wasSelected) {
-                // TODO AÑADIR SELECCION DE FRAGMENT
+                switch (position) {
+                    case 0:
+                        frameLayout.setVisibility(View.VISIBLE);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new PerfilFragment()).commit();
+                        titulo.setText("Tu Perfil");
+                        break;
+                    case 1:
+                        frameLayout.setVisibility(View.GONE);
+                        titulo.setText("Buscar");
+                        break;
+                    case 2:
+                        frameLayout.setVisibility(View.GONE);
+                        titulo.setText("Notificaciones");
+                        break;
+                    case 3:
+                        frameLayout.setVisibility(View.GONE);
+                        titulo.setText("Comunidades");
+                        break;
+                    case 4:
+                        frameLayout.setVisibility(View.GONE);
+                        titulo.setText("Torneos");
+                        break;
+                }
                 return true;
             }
         });
-        // TODO AÑADIR FRAGMENT QUE INICIA
         getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new PerfilFragment()).commit();
     }
 }
